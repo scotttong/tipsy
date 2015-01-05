@@ -26,12 +26,16 @@ class ViewController: UIViewController {
  
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        splitTwoLabel.text = "$0.00"
+        splitThreeLabel.text = "$0.00"
+        splitFourLabel.text = "$0.00"
+        
         
 //        set the landing state
         billTextField.center = CGPoint (x:160, y:250)
         calculationsView.alpha = 0
         billAmountLabel.center = CGPoint (x:160, y:180)
-        //self.billTextField.becomeFirstResponder()
+//        self.billTextField.becomeFirstResponder()
         }
     
     @IBAction func onTouchDownTextField(sender: AnyObject) {
@@ -46,6 +50,13 @@ class ViewController: UIViewController {
     
     @IBAction func onEditingChanged(sender: AnyObject) {
 //        println("user is editing")
+        
+//            UIView.animateWithDuration(0.3, animations: {
+//                    self.billTextField.center = CGPoint (x:160, y:80)
+//                    self.calculationsView.alpha = 1
+//                    self.billAmountLabel.alpha = 0
+//                })
+
         
         var billAmount = NSString(string: billTextField.text).doubleValue
         var tipPercentages = [0.15, 0.18, 0.20]
